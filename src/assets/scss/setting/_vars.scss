@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+:root {
+    // font
+    --mainEng-font: "Roboto";
+    --mainKor-font: "Noto Sans KR";
+
+    // backgound color
+    --mainBg-color: #222;
+    --subB100: #fff;
+    --subBg200: #eee;
+    --subBg300: #777;
+    --subBg400: #555;
+    --subBg500: #333;
+
+
+    // color
+    --main-color: #ffd580;
+    --white: #fff;
+    --black: #000;
+
+
+    font-family: var(--mainEng-font), var(--mainKor-font);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    @media (max-width: 800px) {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+
+body {
+    color: var(--white);
+    background-color: var(--mainBg-color);
+}
