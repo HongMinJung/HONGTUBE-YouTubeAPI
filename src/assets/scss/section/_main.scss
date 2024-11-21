@@ -59,6 +59,7 @@
             color: var(--main-color);
             font-size: 30px;
             font-weight: 600;
+            margin-bottom: 8px;
 
             em {
                 font-size: 28px;
@@ -81,7 +82,8 @@
 
             .video_box {
                 width: 20%;
-                margin-bottom: 20px;
+                margin-bottom: 30px;
+                padding-right: 10px;
 
                 img {
                     width: 100%;
