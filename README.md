@@ -45,40 +45,7 @@ REACT_APP_YOUTUBE_API_KEY=your_youtube_api_key_here
 npm start
 ```
 
-브라우저에서 `http://localhost:3000`으로 접속하세요.
-
-## 🔑 YouTube API 키 발급 방법
-
-1. [Google Cloud Console](https://console.cloud.google.com/)에 접속
-2. 새 프로젝트 생성 또는 기존 프로젝트 선택
-3. YouTube Data API v3 활성화
-4. 사용자 인증 정보에서 API 키 생성
-5. 생성된 API 키를 `.env` 파일에 설정
-
-## 📁 프로젝트 구조
-
-```
-src/
-├── components/          # React 컴포넌트
-│   ├── HeaderCont.jsx   # 헤더 컴포넌트
-│   ├── MainConts.jsx    # 메인 페이지
-│   ├── VideoConts.jsx   # 비디오 상세 페이지
-│   ├── SearchConts.jsx  # 검색 결과 페이지
-│   └── ...
-├── assets/              # 스타일 및 리소스
-│   └── scss/           # SCSS 스타일 파일
-└── utils/              # 유틸리티 함수
-```
-
 ## 🚀 배포
 
 Netlify를 통해 사이트를 배포할 수 있습니다:
 
-1. GitHub에 코드 푸시
-2. Netlify에서 GitHub 저장소 연결
-3. 환경 변수 설정 (YouTube API 키)
-4. 배포 완료
-
-## 📝 라이선스
-
-이 프로젝트는 MIT 라이선스 하에 배포됩니다.
