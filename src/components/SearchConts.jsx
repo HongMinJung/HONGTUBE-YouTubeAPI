@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { FiSearch, FiClock, FiEye } from 'react-icons/fi';
+import { FiSearch, FiEye } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import Loader from './Loader';
 import Category from './Category';
