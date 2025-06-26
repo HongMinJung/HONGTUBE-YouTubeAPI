@@ -69,6 +69,13 @@ export default function SearchConts() {
     setLoading(true);
     setError(null);
     
+    // API 키 확인
+    if (!process.env.REACT_APP_YOUTUBE_API_KEY) {
+      setError('YouTube API 키가 설정되지 않았습니다.');
+      setLoading(false);
+      return;
+    }
+    
     // 검색어가 허용된 카테고리/채널인지 확인
     const allowed = isAllowedSearchTerm(searchTerm);
     setIsAllowedSearch(allowed);

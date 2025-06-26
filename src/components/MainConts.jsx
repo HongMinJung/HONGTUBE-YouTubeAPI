@@ -15,12 +15,25 @@ export default function MainConts() {
     setLoading(true);
     setError(null);
     
+    // API 키 확인
+    if (!process.env.REACT_APP_YOUTUBE_API_KEY) {
+      setError('YouTube API 키가 설정되지 않았습니다.');
+      setLoading(false);
+      return;
+    }
+    
     fetch(
       `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${selectCategory}&type=video&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
     )
       .then((response) => {
         if (!response.ok) {
-          throw new Error('API 요청에 실패했습니다.');
+          if (response.status === 403) {
+            throw new Error('YouTube API 키에 문제가 있습니다. 새로운 API 키를 발급받아주세요.');
+          } else if (response.status === 429) {
+            throw new Error('API 할당량이 초과되었습니다. 잠시 후 다시 시도해주세요.');
+          } else {
+            throw new Error(`API 요청에 실패했습니다. (${response.status})`);
+          }
         }
         return response.json();
       })
