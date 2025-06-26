@@ -221,3 +221,320 @@
       }
     }
   }
+
+.error {
+    text-align: center;
+    padding: 50px 20px;
+    color: #ff6b6b;
+    font-size: 18px;
+    background-color: rgba(255, 107, 107, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.no-results {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--subBg300);
+
+    .no-results-icon {
+        font-size: 48px;
+        margin-bottom: 20px;
+        opacity: 0.5;
+    }
+
+    h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: var(--white);
+    }
+
+    p {
+        font-size: 16px;
+        margin: 0 0 20px 0;
+    }
+
+    .suggested-categories {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+
+        .category-tag {
+            background-color: var(--main-color);
+            color: var(--black);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: var(--white);
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(255, 213, 128, 0.3);
+            }
+        }
+    }
+}
+
+// 검색 결과 페이지 스타일
+.search-contents {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  .search-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--subBg400);
+
+    .search-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .search-icon {
+        font-size: 24px;
+        color: var(--main-color);
+      }
+
+      h2 {
+        color: var(--white);
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0;
+      }
+
+      .result-count {
+        color: var(--subBg300);
+        font-size: 14px;
+        background-color: var(--subBg400);
+        padding: 5px 12px;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  .search-results {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .search-video-card {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      background-color: var(--subBg500);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: var(--subBg400);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .video-thumbnail {
+        position: relative;
+        flex-shrink: 0;
+        width: 280px;
+        height: 158px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+
+        .video-duration {
+          position: absolute;
+          bottom: 8px;
+          right: 8px;
+          background-color: rgba(0, 0, 0, 0.8);
+          color: white;
+          padding: 2px 6px;
+          border-radius: 4px;
+          font-size: 12px;
+
+          .duration-icon {
+            font-size: 10px;
+          }
+        }
+      }
+
+      .video-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .video-title {
+          margin: 0;
+          
+          a {
+            color: var(--white);
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+
+            &:hover {
+              color: var(--main-color);
+            }
+          }
+        }
+
+        .video-meta {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          font-size: 14px;
+
+          .channel-name {
+            color: var(--main-color);
+            text-decoration: none;
+            font-weight: 500;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          .publish-date {
+            color: var(--subBg300);
+          }
+        }
+
+        .video-description {
+          color: var(--subBg200);
+          font-size: 14px;
+          line-height: 1.5;
+          margin: 0;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .video-stats {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          .view-count {
+            color: var(--subBg300);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            .stat-icon {
+              font-size: 12px;
+            }
+          }
+
+          .like-count {
+            color: var(--subBg300);
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+
+  .no-results {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--subBg300);
+
+    .no-results-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+      opacity: 0.5;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: var(--white);
+    }
+
+    p {
+      font-size: 16px;
+      margin: 0 0 20px 0;
+    }
+
+    .suggested-categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+
+      .category-tag {
+        background-color: var(--main-color);
+        color: var(--black);
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: var(--white);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(255, 213, 128, 0.3);
+        }
+      }
+    }
+  }
+}
+
+// 반응형 디자인
+@media (max-width: 768px) {
+  .search-contents {
+    padding: 0 15px;
+
+    .search-header {
+      .search-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+    }
+
+    .search-results {
+      .search-video-card {
+        flex-direction: column;
+        gap: 15px;
+
+        .video-thumbnail {
+          width: 100%;
+          height: 200px;
+        }
+
+        .video-info {
+          .video-title a {
+            font-size: 16px;
+          }
+
+          .video-meta {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+          }
+        }
+      }
+    }
+  }
+}

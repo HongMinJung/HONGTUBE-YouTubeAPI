@@ -34,11 +34,20 @@ export const categories = [
         icon: <FaLongArrowAltRight />
     },
     {
-        name: 'Junsoo 함준수',
+        name: '딘디DINDIHYE',
         icon: <FaLongArrowAltRight />
     },
     {
-        name: '쁨이bbeume',
+        name: '혜인 HEYNEE',
+        icon: <FaLongArrowAltRight />
+    },
+    {
+        name: '패션튜브삭형',
+        icon: <FaLongArrowAltRight />
+    },
+    {
+        name: '윤비누YOONSOAP',
         icon: <FaLongArrowAltRight />
     }
+
 ]
